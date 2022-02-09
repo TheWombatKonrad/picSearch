@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 * {
   background-image: url(background.webp);
   background-attachment: fixed;
@@ -5,7 +8,9 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  font-family: url(SupermercadoOne-Regular.ttf);/*fungerar inte*/
+  /*font-family: 'Supermercado One', cursive;*/
+  font-family: 'Oswald', sans-serif;
+  color: white;
 }
 
 header{
@@ -26,5 +31,5 @@ header{
 }
 
 footer{
-  
+
 }
