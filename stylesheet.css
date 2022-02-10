@@ -1,35 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+/*universal selector.... wildcard*/
 * {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+}
+
+html{
+  padding: 20px;
+
   background-image: url(background.webp);
   background-attachment: fixed;
   background-size: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  /*font-family: 'Supermercado One', cursive;*/
+
+  /*font-family: 'Supermercado One', sans-serif;*/
   font-family: 'Oswald', sans-serif;
   color: white;
-}
-
-header{
-
-}
-
-.searchField{
-
-}
-
-.pageNav{
-
-}
-
-.pictureContainer{
-  display: flex;
-  flex-direction: row;
-}
-
-footer{
-
 }
