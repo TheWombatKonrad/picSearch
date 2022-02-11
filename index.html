@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="script.js" defer></script>
     <title>picSearch</title>
   </head>
   <body>
@@ -23,11 +24,13 @@
 
       <div class="pictureContainer">
         <ul id="picture-list">
+          <template id="pic-template">
           <li>
-            <template id="pic-template">
-            generic, blir klonad
+            <img src="" class="pic">
+            <span class="contributor"></span>
+            <span class="tags"></span>
+          </li>
           </template>
-        </li>
         </ul>
       </div>
 
