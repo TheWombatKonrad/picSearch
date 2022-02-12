@@ -15,7 +15,7 @@ async function start(){
 
 //images is not iterable?? :(
 //undefined = not yet initialized... but should be?
-  for(const image of images){
+  for(let image of images){
     fetchAllImages(image);
   }
 
@@ -23,7 +23,7 @@ async function start(){
 
   function fetchAllImages(image){
 
-    let pic = document.createElement('pic');
+    let pic = document.createElement('img');
     pic.setAttribute('src', image.previewURL);
       //img in createElement = tag name, specifies the type of element created
       //setAttribute adds url into src in html
