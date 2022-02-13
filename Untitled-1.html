@@ -1,50 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TicketForecast</title>
-  <meta name="description" content="Check the forecast before going to the movies!">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+    <title>
+        Create a Search Bar using HTML and CSS
+    </title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1">
 </head>
+  
 <body>
-  <header>
-    <h1>TicketForecast</h1>
-  </header>
-  <main>
-    <section id="screenings">
-      <h2>Screenings</h2>
-      <ul id="screening-list">
-        <template id="screening-template">
-          <li>
-            <h3 class="movie-title">Movie Title</h3>
-            <img src="" class="movie-image">
-            <p class="screening-time">Screening Time</p>
-            <p class="weather-forecast">Weather Forecast</p>
-            <button type="button" class="buy-ticket-button">Buy Ticket</button>
-          </li>
-        </template>
-      </ul>
-    </section>
-    <section id="tickets">
-      <h2>My Tickets</h2>
-      <ul id="ticket-list">
-        <template id="ticket-template">
-          <li>
-            <img src="" class="movie-image">
-            <h3>
-              <span class="movie-title">Movie Title</span>
-              (<span class="screening-time">12:34</span>)
-            </h3>
-            <button type="button" class="remove-ticket-button">❌</button>
-          </li>
-        </template>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <small>Copyright 2022 TicketForecast</small>
-  </footer>
+      
+    <!-- Navbar items -->
+    <div id="navlist">
+        
+      
+          
+        <!-- search bar right align -->
+        <div class="search">
+            <form action="#">
+                <input type="text"
+                    placeholder=" Search Courses"
+                    name="search">
+                <button>
+                    <i class="fa fa-search"
+                        style="font-size: 18px;">
+                    </i>
+                </button>
+            </form>
+        </div>
+    </div>
+      
+ 
+    </div>
 </body>
-</html>
+  
+</html>  
