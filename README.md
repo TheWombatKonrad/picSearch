@@ -1,7 +1,4 @@
-# picSearch
-
-1. HTML och CSS
-2. Javascript
+jag håller med om att laffys sätt nog är bättre, men jag tkr även att vi ska följa jakobs sätt för att då kan han ej klaga
 
 för bildcontainer:
 display: flex;
@@ -11,4 +8,8 @@ flex-wrap: wrap;
 för nav:
 button type="button"
 
-defer
+<div id="picture">
+    <img src="" id="pic">
+    <span id="user"></span>
+    <span id="tags"></span>
+</div>
