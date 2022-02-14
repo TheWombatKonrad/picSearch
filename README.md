@@ -1,15 +1,9 @@
-jag håller med om att laffys sätt nog är bättre, men jag tkr även att vi ska följa jakobs sätt för att då kan han ej klaga
+page buttons
+  input sparas när man byter sida - undvik ny sökning bugg
+  knapparna försvinner
 
-för bildcontainer:
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
+färg-rulllista
+  any color
 
-för nav:
-button type="button"
-
-<div id="picture">
-    <img src="" id="pic">
-    <span id="user"></span>
-    <span id="tags"></span>
-</div>
+göra sidan snygg
+  responsivitet

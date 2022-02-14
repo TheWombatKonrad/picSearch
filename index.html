@@ -13,16 +13,19 @@
 
     </header>
 
-    <nav class="pageNav">
-       <div class="searchField">
+  <section id=search>
+    <input id='searchbar'
+    type="text"
+    placeholder="Search"
+    name="search">
 
-          <input type="text"
-            placeholder="Search"
-            name="search">
-  <section></section>
+    <button type="button" name="search-button" onclick="searchAPI();">Search</button>
+  </section>
+
+    <nav class="pageNav">
         <ul>
-          <li><button type="button" class="button-back">Next</button> </li>
-          <li><button type="button" class="button-next">Back</button> </li>
+          <li><button type="button" class="button-back" onclick="backPage();">Back</button> </li>
+          <li><button type="button" class="button-next" onclick="nextPage();">Next</button> </li>
         </ul>
       </nav>
 
@@ -31,11 +34,11 @@
       </div>
 
       <nav class="pageNav">
-        <ul>
-          <li><button type="button" class="button-back">Back</button> </li>
-          <li><button type="button" class="button-next">Next</button> </li>
-        </ul>
-      </nav>
+          <ul>
+            <li><button type="button" class="button-back" onclick="backPage();">Back</button> </li>
+            <li><button type="button" class="button-next" onclick="nextPage();">Next</button> </li>
+          </ul>
+        </nav>
 
       <footer>
         Made by Malte Nilsson , Jens Malmqvist TH2023

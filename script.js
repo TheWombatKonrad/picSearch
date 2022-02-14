@@ -1,21 +1,20 @@
-start();
-
-async function start(){
-
-let params = new URLSearchParams({
+let startParams = new URLSearchParams({
     key: '25658759-75048e1e43fe34cc1d40a96f8',
+    page: 1,
+    per_page: 10,
   });
+
+let currentPage = 1;
+
+retrievePictures(startParams);
+
+async function retrievePictures(params){
 
   let images = await fetch('https://pixabay.com/api/?' + params.toString())
   .then(response => response.json())
   .then (data => {
 
-    var images = [];
-
-    if(data.hits.length >= 10)
-    {
-      images = data.hits.slice(0,10);
-    }
+    var images = data.hits;
 
     for(image of images)
     {
@@ -48,10 +47,55 @@ let params = new URLSearchParams({
   }//fetchAllImages
 }//start
 
+async function searchAPI(){
+
+  let input = document.getElementById('searchbar').value.toLowerCase();
+
+  let params = new URLSearchParams({
+      key: '25658759-75048e1e43fe34cc1d40a96f8',
+      q: input,
+      page: 1,
+      per_page: 10,
+    });
+
+  document.getElementById('pictureContainer').innerHTML = null;
+
+  await retrievePictures(params);
+}
+
+async function nextPage(){
+
+  let params = new URLSearchParams({
+      key: '25658759-75048e1e43fe34cc1d40a96f8',
+      page: currentPage + 1,
+      per_page: 10,
+    });
+
+    currentPage++;
+
+    document.getElementById('pictureContainer').innerHTML = null;
+
+    await retrievePictures(params);
+}
+
+async function backPage(){
+
+  let params = new URLSearchParams({
+      key: '25658759-75048e1e43fe34cc1d40a96f8',
+      page: currentPage - 1,
+      per_page: 10,
+    });
+
+    currentPage--;
+
+    document.getElementById('pictureContainer').innerHTML = null;
+
+    await retrievePictures(params);
+}
+
+
 //q search term
 //color Accepted values: "grayscale", "transparent", "red", "orange", "yellow", "green", "turquoise", "blue", "lilac", "pink", "white", "gray", "black", "brown"
-//page returned results are pageinated, parameter selects page
-//per_page default 20
 //total = total number of hits
 //totalHits = hits returned by api, default max 500
 //user = name of contributor
