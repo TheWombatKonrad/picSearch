@@ -7,3 +7,9 @@ flex-wrap: wrap;
 
 för nav:
 button type="button"
+
+<div id="picture">
+    <img src="" id="pic">
+    <span id="user"></span>
+    <span id="tags"></span>
+</div>

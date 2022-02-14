@@ -22,3 +22,12 @@ html{
   font-family: 'Oswald', sans-serif;
   color: white;
 }
+
+span{
+  display: block;
+}
+
+#pictureContainer {
+  display: flex;
+  flex-wrap: wrap;
+}

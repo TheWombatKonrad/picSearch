@@ -2,10 +2,7 @@ start();
 
 async function start(){
 
-  let pictureTemplate = document.querySelector('#picture-template');
-  pictureTemplate.remove;
-
-  let params = new URLSearchParams({
+let params = new URLSearchParams({
     key: '25658759-75048e1e43fe34cc1d40a96f8',
   });
 
@@ -30,30 +27,27 @@ async function start(){
 
   function fetchAllImages(image){
 
-    //let pic = document.createElement('img');
-    //pic.setAttribute('src', image.previewURL);
-      //img in createElement = tag name, specifies the type of element created
-      //setAttribute adds url into src in html
+    let newNode = document.createElement('div');
+    newNode.className = 'picture';
 
-    //let user = document.createElement('span');
-    //user.textContent = image.user;
+    let pic = document.createElement('img');
+    pic.setAttribute('src', image.webformatURL);
 
-    //let tags = document.createElement('span');
-    //tags.textContent = image.tags;
+    let user = document.createElement('span');
+    user.textContent = image.user;
 
-    let listItem = pictureTemplate.content.firstElementChild.cloneNode(true);
-    listItem.querySelector('.pic').setAttribute('src', image.webformatURL);
-    listItem.querySelector('.user').textContent = image.user;
-    listItem.querySelector('.tags').textContent = image.tags;
+    let tags = document.createElement('span');
+    tags.textContent = image.tags;
 
-    listItem.append();
+    newNode.appendChild(pic);
+    newNode.appendChild(user);
+    newNode.appendChild(tags);
+
+    document.getElementById('pictureContainer').appendChild(newNode);
 
   }//fetchAllImages
 }//start
 
-
-
-//? before key????
 //q search term
 //color Accepted values: "grayscale", "transparent", "red", "orange", "yellow", "green", "turquoise", "blue", "lilac", "pink", "white", "gray", "black", "brown"
 //page returned results are pageinated, parameter selects page
