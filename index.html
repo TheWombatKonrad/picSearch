@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
     <script src="script.js" defer></script>
     <title>picSearch</title>
@@ -9,20 +10,24 @@
   <body>
     <header>
       <h1>picSearch</h1>
+
     </header>
 
-      <div class="searchField">
+    <nav class="pageNav">
+       <div class="searchField">
 
-      </div>
-
-      <nav class="pageNav">
+          <input type="text"
+            placeholder="Search"
+            name="search">
+  <section></section>
         <ul>
-          <li><button type="button" class="button-back">Back</button> </li>
-          <li><button type="button" class="button-next">Next</button> </li>
+          <li><button type="button" class="button-back">Next</button> </li>
+          <li><button type="button" class="button-next">Back</button> </li>
         </ul>
       </div>
 
-      <div class="pictureContainer">
+      <div id="pictureContainer">
+        <template id="pic-template">
         <ul id="picture-list">
           <template id="pic-template">
           <li>
@@ -32,6 +37,7 @@
           </li>
           </template>
         </ul>
+      </template>
       </div>
 
       <nav class="pageNav">
@@ -39,7 +45,7 @@
       </nav>
 
       <footer>
-        lots of info
+        Made by Malte Nilsson , Jens Malmqvist TH2023
       </footer>
 
   </body>
