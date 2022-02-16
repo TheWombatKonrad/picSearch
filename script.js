@@ -5,6 +5,8 @@ let startParams = new URLSearchParams({
   });
 
 let currentPage = 1;
+let totalHits;
+let input = '';
 
 retrievePictures(startParams);
 
@@ -14,12 +16,14 @@ async function retrievePictures(params){
   .then(response => response.json())
   .then (data => {
 
-    var images = data.hits;
+    let images = data.hits;
+    totalHits = data.totalHits;
 
     for(image of images)
     {
       fetchAllImages(image);
     }
+
   });
 
 //===================================
@@ -49,7 +53,7 @@ async function retrievePictures(params){
 
 async function searchAPI(){
 
-  let input = document.getElementById('searchbar').value.toLowerCase();
+  input = document.getElementById('searchbar').value.toLowerCase();
 
   let params = new URLSearchParams({
       key: '25658759-75048e1e43fe34cc1d40a96f8',
@@ -69,6 +73,7 @@ async function nextPage(){
       key: '25658759-75048e1e43fe34cc1d40a96f8',
       page: currentPage + 1,
       per_page: 10,
+      q: input,
     });
 
     currentPage++;
@@ -76,6 +81,13 @@ async function nextPage(){
     document.getElementById('pictureContainer').innerHTML = null;
 
     await retrievePictures(params);
+
+    let imagesShown = currentPage * 10;
+
+    if((totalHits - imagesShown) <= 0){
+      document.getElementsByClassName('button-next').hidden = true;
+    }
+
 }
 
 async function backPage(){
@@ -84,6 +96,7 @@ async function backPage(){
       key: '25658759-75048e1e43fe34cc1d40a96f8',
       page: currentPage - 1,
       per_page: 10,
+      q: input,
     });
 
     currentPage--;
@@ -91,6 +104,12 @@ async function backPage(){
     document.getElementById('pictureContainer').innerHTML = null;
 
     await retrievePictures(params);
+
+    let imagesShown = currentPage * 10;
+
+    if((totalHits - imagesShown) <= 0){
+      document.getElementsByClassName('button-back').hidden = true;
+    }
 }
 
 
