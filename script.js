@@ -7,6 +7,7 @@ let startParams = new URLSearchParams({
 let currentPage = 1;
 let totalHits;
 let input = '';
+let color;
 
 retrievePictures(startParams);
 
@@ -54,10 +55,12 @@ async function retrievePictures(params){
 async function searchAPI(){
 
   input = document.getElementById('searchbar').value.toLowerCase();
+  color = document.getElementById('colors').value;
 
   let params = new URLSearchParams({
       key: '25658759-75048e1e43fe34cc1d40a96f8',
       q: input,
+      colors: color,
       page: 1,
       per_page: 10,
     });
@@ -71,9 +74,11 @@ async function nextPage(){
 
   let params = new URLSearchParams({
       key: '25658759-75048e1e43fe34cc1d40a96f8',
+      q: input,
+      colors: color,
       page: currentPage + 1,
       per_page: 10,
-      q: input,
+
     });
 
     currentPage++;
@@ -94,9 +99,10 @@ async function backPage(){
 
   let params = new URLSearchParams({
       key: '25658759-75048e1e43fe34cc1d40a96f8',
+      q: input,
+      colors: color,
       page: currentPage - 1,
       per_page: 10,
-      q: input,
     });
 
     currentPage--;
@@ -114,7 +120,9 @@ async function backPage(){
 
 
 //q search term
-//color Accepted values: "grayscale", "transparent", "red", "orange", "yellow", "green", "turquoise", "blue", "lilac", "pink", "white", "gray", "black", "brown"
+//color Accepted values: "grayscale", "transparent", "red", "orange",
+//"yellow", "green", "turquoise", "blue", "lilac", "pink", "white", "gray",
+//"black", "brown"
 //total = total number of hits
 //totalHits = hits returned by api, default max 500
 //user = name of contributor

@@ -1,10 +1,5 @@
-/*span= inline
-div = block*/
-
-@import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
-/*universal selector.... wildcard*/
 * {
   box-sizing: border-box;
   margin: 0 auto;
@@ -18,8 +13,8 @@ html{
   background-attachment: fixed;
   background-size: 100%;
 
-  /*font-family: 'Supermercado One', sans-serif;*/
   font-family: 'Oswald', sans-serif;
+  font-size: 15px;
   color: white;
 }
 
@@ -27,13 +22,19 @@ span{
   display: block;
 }
 
+/*RESPONSIVITY*/
+
 #pictureContainer {
   display: flex;
   flex-wrap: wrap;
 }
-=======
+
+.picture{
+  flex: 0 1 25%;
+}
+
 h1 {
-  text-align:center;
+  text-align: center;
   font-size: 50px;
   padding: 4px;
 }
