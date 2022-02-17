@@ -11,36 +11,35 @@
     <header>
       <h1>picSearch</h1>
 
+      <section id=search>
+
+        <select id="colors">
+          <option value="">any</option>
+          <option value="grayscale">grayscale</option>
+          <option value="transparent">transparent</option>
+          <option value="red">red</option>
+          <option value="orange">orange</option>
+          <option value="yellow">yellow</option>
+          <option value="green">green</option>
+          <option value="turquoise">turquoise</option>
+          <option value="blue">blue</option>
+          <option value="lilac">lilac</option>
+          <option value="pink">pink</option>
+          <option value="white">white</option>
+          <option value="gray">gray</option>
+          <option value="black">black</option>
+          <option value="brown">brown</option>
+        </select>
+
+        <input id='searchbar'
+        type="text"
+        placeholder="Search"
+        name="search">
+
+        <button type="button" name="search-button" onclick="searchAPI();">Search</button>
+      </section>
+
     </header>
-
-
-  <section id=search>
-
-    <select id="colors">
-      <option value="">any</option>
-      <option value="grayscale">grayscale</option>
-      <option value="transparent">transparent</option>
-      <option value="red">red</option>
-      <option value="orange">orange</option>
-      <option value="yellow">yellow</option>
-      <option value="green">green</option>
-      <option value="turquoise">turquoise</option>
-      <option value="blue">blue</option>
-      <option value="lilac">lilac</option>
-      <option value="pink">pink</option>
-      <option value="white">white</option>
-      <option value="gray">gray</option>
-      <option value="black">black</option>
-      <option value="brown">brown</option>
-    </select>
-
-    <input id='searchbar'
-    type="text"
-    placeholder="Search"
-    name="search">
-
-    <button type="button" name="search-button" onclick="searchAPI();">Search</button>
-  </section>
 
     <nav class="pageNav">
         <ul>

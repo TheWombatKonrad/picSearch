@@ -18,19 +18,34 @@ html{
   color: white;
 }
 
-span{
-  display: block;
+ul {
+  list-style: none;
 }
 
-/*RESPONSIVITY*/
+li {
+  font-size: 20px;
+  padding: 2px;
+}
+
+/*HEADER*/
+
+
+
+
+/*PICTURES*/
 
 #pictureContainer {
   display: flex;
   flex-wrap: wrap;
 }
 
-.picture{
-  flex: 0 1 25%;
+span {
+  display: block;
+}
+
+.picture img {
+  max-width: 300px;
+  flex: 0 1 auto;
 }
 
 h1 {
@@ -41,11 +56,4 @@ h1 {
 
 .pageNav{
   text-align: center;
-
-}
-
-li{
-  font-size: 20px;
-
-  padding: 2px;
 }
