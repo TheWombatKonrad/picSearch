@@ -1,9 +1,8 @@
 page buttons
-  input sparas när man byter sida - undvik ny sökning bugg
   knapparna försvinner
+    gör ny metod för detta, som körs vid varje ny sökning/sida
 
-färg-rulllista
-  any color
 
 göra sidan snygg
-  responsivitet
+  responsivitet 
+    @media?
