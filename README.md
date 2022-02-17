@@ -1,8 +1,9 @@
 page buttons
 <br>  knapparna försvinner
-  gör ny metod för detta, som körs vid varje ny sökning/sida
+ <br> gör ny metod för detta, som körs vid varje ny sökning/sida
 
 
 göra sidan snygg
-  responsivitet 
-    @media?
+ <br> responsivitet 
+  <br>  @media?
+ <br>blocks of color for header, footer
