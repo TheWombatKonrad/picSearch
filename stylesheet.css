@@ -47,10 +47,17 @@ span {
   height: auto;
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1500px)
+@media only screen and (min-width: 500px) and (max-width: 1000px)
 {
-  .picture{
-    max-width: 600px;
+  .picture {
+    flex: 0 1 calc(50% - 8px);
+  }
+}
+
+@media only screen and (min-width: 1000px)
+{
+  .picture {
+    flex: 0 1 calc(20% - 8px);
   }
 }
 
