@@ -7,14 +7,13 @@
   <link rel="stylesheet" href="stylesheet.css">
   <script src="script.js" defer></script>
   <title>picSearch</title>
-  
-</head>
 
+</head>
 
 <body>
   <header>
 
-    
+
        <section id=search>
 
       <select id="colors">
@@ -34,7 +33,7 @@
         <option value="black">black</option>
         <option value="brown">brown</option>
       </select>
-    
+
       <input id='searchbar' type="text" placeholder="Search" name="search">
 
       <button type="button" name="search-button" onclick="searchAPI();">Search</button>
@@ -44,9 +43,9 @@
 <div>
   <nav class="pageNav">
     <ul>
-      
-      <li><button type="button" class="button-back" onClick="backPage();">Back</button> </li> 
-      <li><button type="button" class="button-next" onclick="nextPage();">Next</button> </li>
+
+      <li><button type="button"  class="button-back" id="button-back-top" onClick="backPage();">Back</button> </li>
+      <li><button type="button" class="button-next" id="button-next-top" onclick="nextPage();">Next</button> </li>
     </ul>
   </nav>
 </div>
@@ -56,8 +55,8 @@
   <div>
   <nav class="pageNav">
     <ul>
-      <li><button type="button" class="button-back" onclick="backPage();">Back</button> </li>
-      <li><button type="button" class="button-next" onclick="nextPage();">Next</button> </li>
+      <li><button type="button" class="button-back" id="button-back-bottom" onclick="backPage();">Back</button> </li>
+      <li><button type="button" class="button-next" id="button-next-bottom" onclick="nextPage();">Next</button> </li>
     </ul>
   </nav>
 </div>

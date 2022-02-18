@@ -11,9 +11,10 @@ let input = '';
 let color;
 
 retrievePictures(startParams);
+document.getElementById('button-back-top').hidden = true;
+document.getElementById('button-back-bottom').hidden = true;
 
 async function retrievePictures(params){
-  console.log("heeeeej")
   let images = await fetch('https://pixabay.com/api/?' + params.toString())
   .then(response => response.json())
   .then (data => {
@@ -25,7 +26,6 @@ async function retrievePictures(params){
     {
       fetchAllImages(image);
     }
-    console.log("heeeeej")
   });
 
 //===================================
@@ -69,18 +69,12 @@ async function searchAPI(){
   document.getElementById('pictureContainer').innerHTML = null;
 
   await retrievePictures(params);
+
+  document.getElementById('button-back-top').hidden = true;
+  document.getElementById('button-back-bottom').hidden = true;
 }
 
 async function nextPage(){
-
-  if (currentPage > 1){
-    currentPage + 1;
-  }
-  else{currentPage = 1; }
-
-  if( currentPage == 10){
-    document.getElementsByClassName(classNames='button-back').hidden = true;
-  return }
 
   let params = new URLSearchParams({
       key: '25658759-75048e1e43fe34cc1d40a96f8',
@@ -100,23 +94,17 @@ async function nextPage(){
     let imagesShown = currentPage * 10;
 
     if((totalHits - imagesShown) <= 0){
-      document.getElementsByClassName('button-next').hidden = true;
+      document.getElementById('button-next-top').hidden = true;
+      document.getElementById('button-next-bottom').hidden = true;
     }
+
+    document.getElementById('button-back-top').hidden = false;
+    document.getElementById('button-back-bottom').hidden = false;
 
 }
 
 async function backPage(){
 
- if(currentPage > 0){
-  currentPage - 1;
- }
- else{currentPage = 1; }
-
- if( currentPage == 0){
-  document.getElementsByClassName(classNames='button-back').hidden = true;
-  return
-}
-  console.log("hej");
   let params = new URLSearchParams({
       key: '25658759-75048e1e43fe34cc1d40a96f8',
       q: input,
@@ -125,18 +113,17 @@ async function backPage(){
       per_page: 10,
     });
 
-
     currentPage--;
 
     document.getElementById('pictureContainer').innerHTML = null;
 
     await retrievePictures(params);
 
-
-}
-
-
-    if((totalHits - imagesShown) <= 0){
-      document.getElementsByClassName('button-back').hidden = true;
+    if(currentPage === 1){
+      document.getElementById('button-back-top').hidden = true;
+      document.getElementById('button-back-bottom').hidden = true;
     }
+
+    document.getElementById('button-next-top').hidden = false;
+    document.getElementById('button-next-bottom').hidden = false;
 }

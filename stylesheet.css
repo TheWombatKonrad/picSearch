@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
-
-
-
 * {
   margin: 0 auto;
   padding: 0;
@@ -25,13 +22,12 @@ ul {
 }
 
 li {
-display: inline-block; 
+display: inline-block;
 margin-right: 20px;
 padding: 15px;
 }
 
 /*HEADER*/
-
 
 
 
@@ -47,8 +43,15 @@ span {
 }
 
 .picture img {
-  max-width: 300px;
-  flex: 0 1 auto;
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1500px)
+{
+  .picture{
+    max-width: 600px;
+  }
 }
 
 h1 {
@@ -60,5 +63,3 @@ h1 {
 .pageNav{
   text-align: center;
 }
-
-
