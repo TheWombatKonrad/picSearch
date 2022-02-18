@@ -117,12 +117,3 @@ async function backPage(){
       document.getElementsByClassName('button-back').hidden = true;
     }
 }
-
-
-//q search term
-//color Accepted values: "grayscale", "transparent", "red", "orange",
-//"yellow", "green", "turquoise", "blue", "lilac", "pink", "white", "gray",
-//"black", "brown"
-//total = total number of hits
-//totalHits = hits returned by api, default max 500
-//user = name of contributor
