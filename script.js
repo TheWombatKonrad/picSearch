@@ -23,9 +23,9 @@ async function retrievePictures(params){
     totalHits = data.totalHits;
 
     for(image of images)
-    {
-      fetchAllImages(image);
-    }
+      {
+        fetchAllImages(image);
+      }
   });
 
 //===================================
@@ -99,8 +99,8 @@ async function nextPage(){
       document.getElementById('button-next-bottom').hidden = true;
     }
 
-    document.getElementById('button-back-top').hidden = false;
-    document.getElementById('button-back-bottom').hidden = false;
+     document.getElementById('button-back-top').hidden = false;
+     document.getElementById('button-back-bottom').hidden = false;
 
 }
 
@@ -125,6 +125,6 @@ async function backPage(){
       document.getElementById('button-back-bottom').hidden = true;
     }
 
-    document.getElementById('button-next-top').hidden = false;
-    document.getElementById('button-next-bottom').hidden = false;
+      document.getElementById('button-next-top').hidden = false;
+      document.getElementById('button-next-bottom').hidden = false;
 }

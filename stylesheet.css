@@ -20,9 +20,9 @@ ul {
 }
 
 li {
-display: inline-block;
-margin-right: 20px;
-padding: 15px;
+  display: inline-block;  
+  margin-right: 20px;
+  padding: 15px;
 }
 
 /*HEADER*/
@@ -52,7 +52,6 @@ footer{
 
 .picture{
   margin-bottom: 10px;
-  align-items:
 }
 
 .picture img {
