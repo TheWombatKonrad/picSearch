@@ -1,67 +1,70 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheet.css">
-    <script src="script.js" defer></script>
-    <title>picSearch</title>
-  </head>
-  <body>
-    <header>
-      <h1>picSearch</h1>
 
-      <section id=search>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheet.css">
+  <script src="script.js" defer></script>
+  <title>picSearch</title>
+  
+</head>
 
-        <select id="colors">
-          <option value="">any</option>
-          <option value="grayscale">grayscale</option>
-          <option value="transparent">transparent</option>
-          <option value="red">red</option>
-          <option value="orange">orange</option>
-          <option value="yellow">yellow</option>
-          <option value="green">green</option>
-          <option value="turquoise">turquoise</option>
-          <option value="blue">blue</option>
-          <option value="lilac">lilac</option>
-          <option value="pink">pink</option>
-          <option value="white">white</option>
-          <option value="gray">gray</option>
-          <option value="black">black</option>
-          <option value="brown">brown</option>
-        </select>
 
-        <input id='searchbar'
-        type="text"
-        placeholder="Search"
-        name="search">
+<body>
+  <header>
 
-        <button type="button" name="search-button" onclick="searchAPI();">Search</button>
-      </section>
+    
+       <section id=search>
 
-    </header>
+      <select id="colors">
+        <option value="">any</option>
+        <option value="grayscale">grayscale</option>
+        <option value="transparent">transparent</option>
+        <option value="red">red</option>
+        <option value="orange">orange</option>
+        <option value="yellow">yellow</option>
+        <option value="green">green</option>
+        <option value="turquoise">turquoise</option>
+        <option value="blue">blue</option>
+        <option value="lilac">lilac</option>
+        <option value="pink">pink</option>
+        <option value="white">white</option>
+        <option value="gray">gray</option>
+        <option value="black">black</option>
+        <option value="brown">brown</option>
+      </select>
+    
+      <input id='searchbar' type="text" placeholder="Search" name="search">
 
-    <nav class="pageNav">
-        <ul>
-          <li><button type="button" class="button-back" onclick="backPage();">Back</button> </li>
-          <li><button type="button" class="button-next" onclick="nextPage();">Next</button> </li>
-        </ul>
-      </nav>
+      <button type="button" name="search-button" onclick="searchAPI();">Search</button>
+    </section>
 
-      <div id="pictureContainer">
+  </header>
+<div>
+  <nav class="pageNav">
+    <ul>
+      
+      <li><button type="button" class="button-back" onClick="backPage();">Back</button> </li> 
+      <li><button type="button" class="button-next" onclick="nextPage();">Next</button> </li>
+    </ul>
+  </nav>
+</div>
+  <div id="pictureContainer">
 
-      </div>
+  </div>
+  <div>
+  <nav class="pageNav">
+    <ul>
+      <li><button type="button" class="button-back" onclick="backPage();">Back</button> </li>
+      <li><button type="button" class="button-next" onclick="nextPage();">Next</button> </li>
+    </ul>
+  </nav>
+</div>
+  <footer>
+    Made by Malte Nilsson , Jens Malmqvist TH2023
+  </footer>
 
-      <nav class="pageNav">
-          <ul>
-            <li><button type="button" class="button-back" onclick="backPage();">Back</button> </li>
-            <li><button type="button" class="button-next" onclick="nextPage();">Next</button> </li>
-          </ul>
-        </nav>
+</body>
 
-      <footer>
-        Made by Malte Nilsson , Jens Malmqvist TH2023
-      </footer>
-
-  </body>
 </html>
