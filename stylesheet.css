@@ -6,14 +6,12 @@
 }
 
 html{
-  padding: 20px;
-
   background-image: url(background.webp);
   background-attachment: fixed;
   background-size: 100%;
 
   font-family: 'Oswald', sans-serif;
-  font-size: 15px;
+  font-size: 100%;
   color: white;
 }
 
@@ -29,7 +27,21 @@ padding: 15px;
 
 /*HEADER*/
 
+header{
+  background: rgb(43, 5, 61, 0.5);
+}
 
+h1 {
+  text-align: center;
+  font-size: 50px;
+  padding: 4px;
+}
+
+/*FOOTER*/
+
+footer{
+  background: rgb(43, 5, 61, 0.5);
+}
 
 /*PICTURES*/
 
@@ -38,33 +50,36 @@ padding: 15px;
   flex-wrap: wrap;
 }
 
-span {
-  display: block;
+.picture{
+  margin-bottom: 10px;
+  align-items:
 }
 
 .picture img {
   width: 100%;
   height: auto;
+  margin-bottom: -30px;
 }
 
-@media only screen and (min-width: 500px) and (max-width: 1000px)
+span{
+  background: rgb(0, 0, 0, 0.7);
+  display: inline;
+  margin-left: 1rem;
+  font-size: 0.7rem;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1080px)
 {
   .picture {
-    flex: 0 1 calc(50% - 8px);
+    flex: 0 1 calc(50% - 10px);
   }
 }
 
-@media only screen and (min-width: 1000px)
+@media only screen and (min-width: 1080px)
 {
   .picture {
-    flex: 0 1 calc(20% - 8px);
+    flex: 0 1 calc(20% - 10px);
   }
-}
-
-h1 {
-  text-align: center;
-  font-size: 50px;
-  padding: 4px;
 }
 
 .pageNav{

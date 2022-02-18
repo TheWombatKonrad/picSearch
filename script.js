@@ -44,6 +44,7 @@ async function retrievePictures(params){
     let tags = document.createElement('span');
     tags.textContent = image.tags;
 
+
     newNode.appendChild(pic);
     newNode.appendChild(user);
     newNode.appendChild(tags);
