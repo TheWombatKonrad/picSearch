@@ -11,12 +11,12 @@ let input = '';
 let color;
 
 let inputEnter = document.getElementById('searchbar');
-inputEnter.addEventListener('keyup', function(event)){
+inputEnter.addEventListener('keyup', function(event){
   if(event.keyCode === 13) {
     event.preventDefault();
     document.getElementById('search-button').click();
   }
-}
+});
 
 retrievePictures(startParams);
 document.getElementById('button-back-top').hidden = true;
